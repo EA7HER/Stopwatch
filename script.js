@@ -3,7 +3,6 @@ let btn2 = document.getElementById("stop_btn");
 let btn3 = document.getElementById("reset_btn");
 let timer_text = document.getElementById("timer_text");
 
-//adding event listener to all buttons
 btn1.addEventListener("click" , Start);
 btn2.addEventListener("click" , Stop);
 btn3.addEventListener("click" , Reset);
