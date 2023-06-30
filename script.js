@@ -10,7 +10,6 @@ btn3.addEventListener("click" , Reset);
 
 let check = false;
 let check_for_start = false;
-//Define Start function
 let milliSeconds = 0;
 let seconds = 0;
 let minutes = 0;
@@ -20,7 +19,6 @@ let ms, s , m , h;
 
 function Start() {
     if(check_for_start === true) return;
-
     check = true;
     check_for_start = true;
     event_value = setInterval(function(){
@@ -41,9 +39,8 @@ function Start() {
             Reset();
         }
 
-        //-> change to string <-
 
-        //for milliseconds
+        //milliseconds
         if(milliSeconds < 10) {
             ms = "00" + milliSeconds;
         }
@@ -54,7 +51,7 @@ function Start() {
             ms = milliSeconds;
         }
 
-        // for seconds
+        //seconds
         if(seconds < 10) {
             s = "0" + seconds;
         }
@@ -62,7 +59,7 @@ function Start() {
             s = seconds;
         }
 
-        // for minutes
+        //minutes
         if(minutes < 10) {
             m = "0" + minutes;
         }
@@ -70,7 +67,7 @@ function Start() {
             m = minutes;
         }
 
-        // for hours
+        //hours
         if(hours < 10) {
             h = "0" + hours;
         }
@@ -82,7 +79,7 @@ function Start() {
     },5)
 }
 
-//Define Stop function
+//Stop 
 function Stop() {
     if(check === false) return;
     clearInterval(event_value);
@@ -90,7 +87,7 @@ function Stop() {
     check_for_start = false;
 }
 
-//Define Reset function
+//Reset 
 function Reset() {
     check = false;
     check_for_start = false;
